@@ -1,2 +1,31 @@
-
-/*  Put your CSS Here */
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px#ffee00, -1px -1px rgb(255, 0, 0);
+}
+h1 {
+  text-align: center;
+  border-style: dashed;
+  border-width: thick;
+  border-color: rgb(248, 0, 0);
+  border-radius: 10px;
+  position: static;
+  top: 10pc;
+  right: 40pc;
+  font-size: ;
+  color: rgb(0, 102, 255);
+  text-shadow: 2px 2px#f1f16b, -2px -2px rgb(253, 252, 252);
+  text-decoration-style: dashed;
+  text-decoration-color: rgb(243, 3, 3);
+  text-decoration-line: underline;
+  background-color: rgb(8, 8, 8);
+}
+button {
+  background-color: rgba(255, 230, 0, 0.979);
+  color: rgb(10, 27, 255);
+  border: rgb(255, 0, 0);
+  border-style: groove;
+  text-shadow: 1px -1px#ff0000, -1px 1px rgb(255, 255, 255);
+  border-width: 5px;
+  font-weight: bold;
+}
