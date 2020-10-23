@@ -1,30 +1,23 @@
-
-// let myDiv = document.createElement("div");
-// myDiv.textContent = getAnagramsOf;
-// document.body.append(myDiv);
 const button = document.getElementById("findButton");
+
 button.onclick = function () {
   let typedText = document.getElementById("input").value;
-  function alphabetize(a) {
-    return a.toLowerCase().split("").sort().join("").trim();
-  }
-  let alphaText = alphabetize(typedText);
-  for (let aWord of words) {
-    if (alphabetize(aWord) === alphaText) {
-      console.log(aWord);
-      let p = document.createElement("p");
-      p.textContent = aWord;
-      document.body.append(p);
-    }
-    
-    // console.log("typedText", typedText);
-    // console.log("alphabetized text", alphabetize(typedText));
-    // console.log (alphaText, typedText)
-    // Make an array and add the words to the array,
-    // display array
-
-    // or append each word one at a time on the DOM
-  }
+  getAnagramsOf(typedText);
 };
-
-
+function alphebetize(word) {
+  return word.toLowerCase().split("").sort().join("").trim();
+}
+let anagrams = [];
+function getAnagramsOf(typedText) {
+  let currentWord = alphebetize(typedText);
+  for (let i = 0; i < words.length; i++) {
+    let nextWord = alphebetize(words[i]);
+    if (currentWord === nextWord) {
+      anagrams.push(words[i]);
+    }
+  }
+  let outputtedData = document.getElementById("listPerms");
+  for (i = 0; i < anagrams.length; i++) {
+    outputtedData.innerHTML += anagrams[i] + " ";
+  }
+}
